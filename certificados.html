@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificados e Projetos</title>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      padding: 30px 10px 0;
+    }
+    p{
+      font-style: italic;
+    }
+    .o portfolio-info {
+      text-align: center;
+    }
+    .portfolio-info a {
+      margin: 0 5px;
+      padding: 10px;
+      border-radius: 50%;
+      background: rgba(0,123,255,0.8);
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .portfolio-info a:hover {
+      transform: scale(1.1);
+    }
+    a.voltar {
+      display: block;
+      margin: 40px auto;
+      text-align: center;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    a.voltar:hover {
+      color: #0056b3;
+    }
+    .portfolio-content {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 350px;
+      margin: 20px;
+      padding: 15px;
+    }
+    .portfolio-content img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .certificates-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .filter-btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      margin: 0 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #0056b3;
+    }
+
+    .portfolio-content {
+      transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      will-change: opacity, transform;
+      pointer-events: auto;
+    }
+    .portfolio-content.hide {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+      pointer-events: none;
+    }
+    .certificates-container {
+      transition: filter 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    .certificates-container.filtering {
+      filter: blur(1px) brightness(0.98);
+    }
+    .filter-btn {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .filter-btn.active::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+      opacity: 0.18;
+      z-index: -1;
+      border-radius: 20px;
+      animation: btn-glow 1.2s ease-in-out;
+    }
+    @keyframes btn-glow {
+      0% { opacity: 0.4; }
+      100% { opacity: 0.18; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome To My Certificates and Projects.</h1>
+  <p style="text-align: center; font-style: italic; font-weight: bold;">
+    "The pursuit of continuous improvement depends on your dedication and effort."
+  </p>
+
+  <div style="text-align:center; margin: 20px 0;">
+    <button class="filter-btn" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="dio">Dio</button>
+    <button class="filter-btn" data-filter="outros">Outros</button>
+    <button class="filter-btn" data-filter="projetos">Projetos</button>
+ 
+
+               <!-------------DIO---------------->
+
+  <section class="certificates-container">
+
+    <div class="portfolio-content dio"> <!-- Certificado Backend com Java -->
+      <img src="assets/img/portfolio/Certificado-Backend-com-Java.png" alt="Certificado Backend com Java" />
+      <div class="portfolio-info">
+      <h4>Backend com Java</h4>
+      <p>.Git .GitHub .Java .JUnit .SQL .NoSQL .Spring</p>
+      <a href="assets/img/portfolio/Certificado-Backend-com-Java.png" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/WIXULBAY.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Certificado Microsoft Copilot AI -->
+      <img src="assets/img/portfolio/Certificado MIcrosoft Copilot AI.PNG" alt="Certificado Microsoft Copilot AI" />
+      <div class="portfolio-info">
+      <h4>Microsoft Copilot AI</h4>
+      <p>.IA Generativa .Inteligência Artificial (IA) .Git .GitHub .GitHub Copilot .Microsoft Copilot .Machine Learning</p>
+      <a href="assets/img/portfolio/Certificado MIcrosoft Copilot AI.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/MSARTDF7.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!--Fundamentos de Data Analytics com Power BI-->
+      <img src="assets/img/portfolio/Fundamentos de Data Analytics com Power BI.PNG" alt="Fundamentos de Data Analytics com Power BI" />
+      <div class="portfolio-info">
+      <h4>Fundamentos de Data Analytics com Power BI</h4>
+      <p>.Data Analytics .Power BI</p>
+      <a href="assets/img/portfolio/Fundamentos de Data Analytics com Power BI.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/CFNEYHWB.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+    
+    <div class="portfolio-content dio"> <!-- Certificado Machine Learning -->
+      <img src="assets/img/portfolio/Certificado-Machine-Learning.png" alt="Certificado Machine Learning" />
+      <div class="portfolio-info">
+      <h4>Machine Learning</h4>
+      <p>.Machine Learning .AWS .Amazon SageMaker Canvas .Low-code</p>
+      <a href="assets/img/portfolio/Certificado-Machine-Learning.png" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/FVDK69B2.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Desenvolvimento Java com IA -->
+      <img src="assets/img/portfolio/Certificado-Desenvolvimento-Java-IA.png" alt="Desenvolvimento Java com IA" />
+      <div class="portfolio-info">
+      <h4>Desenvolvimento Java com IA</h4>
+      <p>Git. GitHub .Inteligência Artificial (IA) .IA Generativa .Java .Spring .SQL</p>
+      <a href="assets/img/portfolio/Certificado-Desenvolvimento-Java-IA.png" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/C5KNPOQA.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Claro - Java com Spring Boot -->
+      <img src="assets/img/portfolio/certificado-claro.PNG" alt="Claro - Java com Spring Boot" />
+      <div class="portfolio-info">
+      <h4>Claro Java com Spring Boot</h4>
+      <p>.Java .Spring .SQL .NoSQL</p>
+      <a href="assets/img/portfolio/certificado-claro.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/ZSTVMZPC.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!--NTT Data Engenharia de Dados com Python-->
+      <img src="assets/img/portfolio/NTT Data Engenharia de Dados com Python.PNG" alt="NTT Data Engenharia de Dados com Python" />
+      <div class="portfolio-info">
+      <h4>NTT Data Engenharia de Dados com Python</h4>
+      <p>.Python .Power BI .PySpark .SQL .Git .GitHub .POO .ETL</p>
+      <a href="assets/img/portfolio/NTT Data Engenharia de Dados com Python.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/D97WUCVT.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!--NTT DATA Java e IA para Iniciantes-->
+      <img src="assets/img/portfolio/NTTDATA_JAVAEIAPARAINICIANTES.PNG" alt="NTT DATA Java e IA para Iniciantes" />
+      <div class="portfolio-info">
+      <h4>NTT DATA Java e IA para Iniciantes</h4>
+      <p>.Java .GitHub Copilot .Git .GitHub .Cloud</p>
+      <a href="assets/img/portfolio/NTTDATA_JAVAEIAPARAINICIANTES.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/WYQZXFB5.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!--Heineken - Inteligência Artificial -->
+      <img src="assets/img/portfolio/Heineken - Inteligência Artificial Aplicada a Dados com Copilot.PNG" alt="Heineken - Inteligência Artificial Aplicada a Dados com Copilot" />
+      <div class="portfolio-info">
+      <h4>Heineken Inteligência Artificial Aplicada a Dados com Copilot</h4>
+      <p>.Git .GitHub .Banco de dados relacional .SQL .Excel .Microsoft Copilot .Inteligência Artificial (IA) .Banco de Dados</p>
+      <a href="assets/img/portfolio/Heineken - Inteligência Artificial Aplicada a Dados com Copilot.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/86ZTYYL6.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!--Santander CiberSegurança-->
+      <img src="assets/img/portfolio/certificado-cibersegurança-satander.PNG" alt="Bootcamp Santander CiberSegurança" />
+      <div class="portfolio-info">
+      <h4>Santander CiberSegurança</h4>
+      <p>.Linux .Segurança da Informação</p>
+      <a href="assets/img/portfolio/certificado-cibersegurança-satander.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/GSENUFB2.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Excel com Inteligência Artificial -->
+      <img src="assets/img/portfolio/Santander - Excel com Inteligência Artificial.PNG" alt="Santander - Excel com Inteligência Artificial" />
+      <div class="portfolio-info">
+      <h4>Santander Excel com Inteligência Artificial</h4>
+      <p>.Excel .Inteligência Artificial (IA)</p>
+      <a href="assets/img/portfolio/Santander - Excel com Inteligência Artificial.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/L9UKVWO7.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Ri Happy - Front-end do Zero -->
+      <img src="assets/img/portfolio/Certificado-RiHappy-FrontEndDoZero.PNG" alt="Ri Happy - Front-end do Zero" />
+      <div class="portfolio-info">
+      <h4>Ri Happy Front-end do Zero</h4>
+      <p>.Git .GitHub .HTML .CSS .JavaScript</p>
+      <a href="assets/img/portfolio/Certificado-RiHappy-FrontEndDoZero.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/7QPKAUWH.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- WEX - End to End Engineering -->
+      <img src="assets/img/portfolio/WEX - End to End Engineering.PNG" alt="WEX - End to End Engineering" />
+      <div class="portfolio-info">
+      <h4>WEX - End to End Engineering</h4>
+      <p> .C# .NET .Git .GitHub .POO .SQL .SQL Server .MongoD .Docker .Kubernetes .Cloud </p>
+      <a href="assets/img/portfolio/WEX - End to End Engineering.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/VHNIPPXS.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content dio"> <!-- Formação Python Fundamentals -->
+      <img src="assets/img/portfolio/certificado python.PNG" alt="Formação Python Fundamentals" />
+      <div class="portfolio-info">
+      <h4>Formação Python Fundamentals</h4>
+      <p>.Python</p>
+      <a href="assets/img/portfolio/certificado python.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://hermes.dio.me/certificates/RJWOEURK.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+               <!-------------Outros--------------->
+
+    <div class="portfolio-content outros"> <!-- Certificado Big Data & Analytics -->
+      <img src="assets/img/portfolio/certificado-fiap Big Data & Analytics.png" alt="Certificado Big Data & Analytics" />
+      <div class="portfolio-info">
+      <h4>Big Data & Analytics</h4>
+      <p>.Big Data .Analytics</p>
+      <a href="assets/img/portfolio/certificado-fiap Big Data & Analytics.png" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=bb4dbfe667018b04102799ed3a65d176&action=view" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Cyber Academy 2024 -->
+      <img src="assets/img/portfolio/cyber febraban.PNG" alt="Cyber Academy 2024" />
+      <div class="portfolio-info">
+        <h4>Febraban Cyber Academy 2024</h4>
+        <p>.Cyber Academy 2024 .Segurança da Informação</p>
+        <a href="assets/img/portfolio/cyber febraban.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+        <a href="file:///C:/Users/William%20Pero/Desktop/Certificados/Certificate%20Cyber%20Academy%202024.pdf" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Certificado Lógica de Programação -->
+      <img src="assets/img/portfolio/LógicadaProgramação.PNG" alt="Certificado Lógica de Programação" />
+      <div class="portfolio-info">
+      <h4>Lógica de Programação</h4>
+      <p>.Lógica de Programação</p>
+      <a href="assets/img/portfolio/LógicadaProgramação.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+      <a href="https://cursos.dankicode.com/api/certificados/3e6aa2d9-7a1f-4475-bc62-8be5888d4a82" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Git e GitHub Completo -->
+      <img src="assets/img/portfolio/Git Github DankiCode.PNG" alt="Git e GitHub Completo" />
+      <div class="portfolio-info">
+        <h4>Git e GitHub</h4>
+        <p>.Git .GitHub</p>
+        <a href="assets/img/portfolio/Git Github DankiCode.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+        <a href="https://cursos.dankicode.com/api/certificados/c769e452-5cb6-463c-b280-4616deae9f1d" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Excel Completo -->
+      <img src="assets/img/portfolio/Curso de excel.PNG" alt="Excel Completo" />
+      <div class="portfolio-info">
+        <h4>Excel Completo</h4>
+        <p>.Excel </p>
+        <a href="assets/img/portfolio/Curso de excel.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+        <a href="https://cursos.dankicode.com/api/certificados/afa43829-86ae-495c-ba9c-8797086ccbc6" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Cisco-IBM SkillsBuild -->
+      <img src="assets/img/portfolio/Cisco  Artificial Intelligence fundamentals.PNG" alt="Artificial Intelligence fundamentals" />
+      <div class="portfolio-info">
+        <h4>Artificial Intelligence fundamentals</h4>
+        <p>.IA  .Ciência de dados .Artificial Intelligence fundamentals</p>
+        <a href="assets/img/portfolio/Cisco  Artificial Intelligence fundamentals.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+        <a href="https://www.credly.com/badges/2b00c185-a0d9-433e-8f4b-e5b8f224364d/public_url" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content outros"> <!-- Cisco-Networking Academy -->
+      <img src="assets/img/portfolio/Cisco-Introduction to Cybersecurity.PNG" alt="Introduction to Cybersecurity" />
+      <div class="portfolio-info">
+        <h4>Introduction to Cybersecurity</h4>
+        <p>.Introdução à Cibersegurança</p>
+        <a href="assets/img/portfolio/Cisco-Introduction to Cybersecurity.PNG" target="_blank" rel="noopener" title="Visualizar Certificado">&#128269;</a>
+        <a href="https://www.credly.com/badges/e1bb5a99-df63-4c94-a99a-4e458ca0c5dc/public_url" target="_blank" rel="noopener" title="Mais Detalhes">&#128279;</a>
+      </div>
+    </div>
+
+
+                 <!-------------Projetos--------------->
+
+    <div class="portfolio-content projetos"> <!-- Projeto 1 -->
+      <img src="assets/img/portfolio/spotify2.PNG" alt="Projeto 1" />
+      <div class="portfolio-info">
+        <h4>Projeto Spotify</h4>
+        <p>Este projeto consiste na recriação da interface principal do Spotify, com foco no design responsivo e na experiência do usuário.Utilizando HTML, CSS e JavaScript.</p>
+        <a href="assets/img/portfolio/spotify2.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/Projeto-Teste-Pagina_Spotify/" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content projetos"> <!-- Projeto 2 -->
+      <img src="assets/img/portfolio/tecblog.PNG" alt="Projeto 2" />
+      <div class="portfolio-info">
+        <h4>Projeto TecBlog</h4>
+        <p>O TecBlog é uma página web voltada para a divulgação de notícias e conteúdos sobre tecnologia.TecBlog oferece uma experiência de leitura agradável, com HTML, CSS e JavaScript.</p>
+        <a href="assets/img/portfolio/tecblog.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/TecBlog/" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content projetos"> <!-- Projeto 3 -->
+      <img src="assets/img/portfolio/bancofinans.PNG" alt="Projeto 2" />
+      <div class="portfolio-info">
+        <h4>Projeto Banco Finans</h4>
+        <p>Este projeto apresenta a criação de uma página web para o banco Finans, com design moderno e intuitivo. Desenvolvido com foco na usabilidade e segurança, utilizando HTML, CSS e JavaScript.</p>
+        <a href="assets/img/portfolio/bancofinans.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/Projeto-Finans/" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content projetos"> <!-- Projeto 4 -->
+      <img src="assets/img/portfolio/paralax.PNG" alt="Projeto 2" />
+      <div class="portfolio-info">
+        <h4>Projeto Efeito Parallax</h4>
+        <p>Este projeto apresenta uma página web com efeito parallax, onde as imagens de fundo se movem em velocidades diferentes em relação ao conteúdo em primeiro plano, criando uma sensação de profundidade e imersão.</p>
+        <a href="assets/img/portfolio/paralax.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/Efeito-Parallax/" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content projetos"> <!-- Projeto 5 -->
+      <img src="assets/img/portfolio/jogoDetonaRalph.PNG" alt="Projeto 2" />
+      <div class="portfolio-info">
+        <h4>Projeto Jogo Detona Ralph</h4>
+        <p>Este é um jogo simples e divertido baseado no personagem Detona Ralph. O objetivo é clicar no Ralph o maior número de vezes possível para ganhar pontos.O jogo foi desenvolvido com HTML, CSS e JavaScript.</p>
+        <a href="assets/img/portfolio/jogoDetonaRalph.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/Jogo-Detona-Ralph-Dio/" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+
+    <div class="portfolio-content projetos"> <!-- Projeto 6 -->
+      <img src="assets/img/portfolio/JogoMatamosquito.PNG" alt="Projeto 2" />
+      <div class="portfolio-info">
+        <h4>Projeto Jogo Mata Mosquito</h4>
+        <p>Jogo interativo onde o jogador precisa clicar nos mosquitos que aparecem aleatoriamente na tela para eliminá-los e marcar pontos. O jogo inclui diferentes níveis de dificuldade.Desenvolvido com HTML, CSS e JavaScript.</p>
+        <a href="assets/img/portfolio/JogoMatamosquito.PNG" target="_blank" rel="noopener" title="Visualizar Projeto">&#128269;</a>
+        <a href="https://willianpero.github.io/Jogo-Mata-Mosquitos/index.html" target="_blank" rel="noopener" title="Ver no GitHub">&#128279;</a>
+      </div>
+    </div>
+  
+  </section>
+
+  <a href="index.html" class="voltar">&larr; Voltar ao Portfólio</a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const certificates = document.querySelectorAll('.portfolio-content');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          certificates.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = '';
+            } else if (card.classList.contains(filter)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const certificates = document.querySelectorAll('.portfolio-content');
+      const container = document.querySelector('.certificates-container');
+
+      function filterCards(filter) {
+        container.classList.add('filtering');
+        setTimeout(() => {
+          certificates.forEach(card => {
+            if (filter === 'all' || card.classList.contains(filter)) {
+              card.classList.remove('hide');
+            } else {
+              card.classList.add('hide');
+            }
+          });
+          setTimeout(() => {
+            container.classList.remove('filtering');
+          }, 350);
+        }, 120);
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          filterCards(filter);
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Show all on load
+      filterCards('all');
+      buttons[0].classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
